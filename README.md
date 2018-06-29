@@ -42,3 +42,13 @@ player.py is an abstract class. It is inherited both by human player and ai play
 the ai.py contains all the logic to determine where to put its letter. It uses its internal scoring system to determine what is the best play. The idea it first finds a random empty cell. It then 'plays' it. Checks whether it will help the opponent or help the AI. Once the best internal score is found, it chooses that as its move.
 
 I tried to avoid using outside modules where possible to make it easy to copy and use. Feel free to use it in anyway you like. 
+
+
+Installation:
+=============
+Requires Python 3
+
+Copy or clone the repository into a folder of your choice.
+
+Start game by typing  ```python3 sosstart.py``` on the command line
+
