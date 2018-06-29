@@ -14,6 +14,7 @@ Player scoring is not implemented yet but there is a placeholder. Although the A
 
 Sample Board on Terminal
 ========================
+```
 Hello Human. I am Computer Let's play SOS !
 Please choose the letter S or O (Humans play first haha!): S
 Human you will play letter S, and I will play letter O. 
@@ -27,3 +28,4 @@ C: [ ][S][ ][ ][ ][ ]
 D: [ ][O][O][ ][ ][ ]
 E: [ ][S][O][S][ ][ ]
 F: [O][ ][O][ ][ ][ ]
+```
