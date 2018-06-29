@@ -31,7 +31,7 @@ def getPlayerInfo():
 
 hLetter, humanName, aiLetter, aiName = getPlayerInfo()
 # Create the play board
-board = Board(4)
+board = Board(6)
 
 # Create human player
 human = HumanPlayer(board, humanName, hLetter)
