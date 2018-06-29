@@ -14,7 +14,7 @@ def getPlayerInfo():
     aiName='Computer'
     humanName = 'Human'
     hLetter=''
-    print(BColors.BLUE.format("Hello. I am %s Let's play SOS !") % aiName)
+    print(BColors.BLUE.format(f"Hello. I am {aiName} Let's play SOS !"))
     while hLetter not in sosLetters:
         hLetter = input (BColors.BLUE.format("Please choose the letter S or O (Humans play first haha!): ")).upper()
         if hLetter=='S':
@@ -24,7 +24,7 @@ def getPlayerInfo():
         else:
             pass
 
-    print("%s you will play letter %s, and I will play letter %s. " % (humanName, hLetter, aiLetter))
+    print(f"{humanName} you will play letter {hLetter}, and I will play letter {aiLetter}. ")
     return (hLetter, humanName, aiLetter, aiName)
 
 ##################### Main Game Start ##################################
@@ -47,7 +47,7 @@ while True:
     # Show board
     board.show()
     if board.boardcount == board.size ** 2:
-        print("Game over! %s's score is %s, %s's score is %s " % (human.name,human.score,ai.name,ai.score))
+        print(f"Game over! {human.name}'s score is {human.score}, {ai.name}'s score is {ai.score}")
         quit = input("Press q to quit").upper()
         if quit == 'Q':
             exit()
@@ -58,6 +58,7 @@ while True:
     while (row,col) <(0,0) or (row,col) > (board.size-1,board.size-1):
         coord = input('\nEnter Board square as Row Letter and Col Number (E.g. B6): ').upper()
         row, col = board.translate_to_coords(coord)
+
 
     # Human moves and get score
     human.play(row, col)
