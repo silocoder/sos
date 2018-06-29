@@ -41,7 +41,7 @@ class Board:
             return (-1,-1)
         row = ord(coord[0]) - ord('A')
         col = int(coord[1]) - 1
-        if row in range(0, self.size-1) and col in range(0, self.size-1):
+        if row in range(0, self.size) and col in range(0, self.size):
             return [row, col]
         else:
             return (-1,-1)
@@ -66,6 +66,6 @@ class Board:
         if self.board[row][col]['value'] == ' ':
             self.board[row][col]['value'] =  letter
             self.board[row][col]['color'] = BColors.PURPLE
-            self.board.boardcount += 1
+            self.boardcount += 1
         else:
             raise Exception("Cell is already occupied. Try another one")

@@ -160,31 +160,31 @@ class AI:
                     self.bestScore[0] = row
                     self.bestScore[1] = col
 
-                else:
-                    if score <= 0:  # Now check if we have score <=0 and try to block for the opposite letter.
-                        self.headCell = random.randint(0, self.sizex2 - 1)
-                        self.tailCell = (self.headCell + 1) % (self.sizex2)
-                        while True:  # See if O will score for them. If yes, we block this.
-                            row, col = self.findNextEmptyCellAtRow()
-                            if [row, col] >= [0, 0]:
-                                score = self.getScoreForLetterAtRow(pLetter[1], row, col)
-                                if score > self.bestScoreBlock[2]:
-                                    self.bestScoreBlock[2] = score
-                                    self.bestScoreBlock[0] = row
-                                    self.bestScoreBlock[1] = col
+            else:
+                if score <= 0:  # Now check if we have score <=0 and try to block for the opposite letter.
+                    self.headCell = random.randint(0, self.sizex2 - 1)
+                    self.tailCell = (self.headCell + 1) % (self.sizex2)
+                    while True:  # See if O will score for them. If yes, we block this.
+                        row, col = self.findNextEmptyCellAtRow()
+                        if [row, col] >= [0, 0]:
+                            score = self.getScoreForLetterAtRow(pLetter[1], row, col)
+                            if score > self.bestScoreBlock[2]:
+                                self.bestScoreBlock[2] = score
+                                self.bestScoreBlock[0] = row
+                                self.bestScoreBlock[1] = col
 
-                            else:
-                                if self.bestScoreBlock[2] > self.bestScore[2]:
-                                    self.bestScore[2] = self.bestScoreBlock[2]
-                                    self.bestScore[0] = self.bestScoreBlock[0]
-                                    self.bestScore[1] = self.bestScoreBlock[1]
+                        else:
+                            if self.bestScoreBlock[2] > self.bestScore[2]:
+                                self.bestScore[2] = self.bestScoreBlock[2]
+                                self.bestScore[0] = self.bestScoreBlock[0]
+                                self.bestScore[1] = self.bestScoreBlock[1]
 
-                                break
+                            break
 
-                    # // while for the letter O
-                    # // if score<=0
+                # // while for the letter O
+                # // if score<=0
 
-                    break
+                break
 
         # // while for letter S
 
