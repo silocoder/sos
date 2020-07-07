@@ -1,7 +1,6 @@
 # Main file
 # //
 # // 2
-# Line 0
 # Line 1
 # Line 11
 # Line 3
@@ -12,7 +11,6 @@
 # Line 8
 # Line 9
 # Line 10
-# Line12
 # Line 11
 # Line 14
 # Line 15
